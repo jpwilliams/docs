@@ -133,6 +133,7 @@ const Guides = () => (
         justify-content: space-between;
         padding: 24px 0;
         position: relative;
+        color: #000;
       }
 
       .guide :global(h3) {
