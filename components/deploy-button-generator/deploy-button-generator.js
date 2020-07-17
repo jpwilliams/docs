@@ -263,7 +263,7 @@ export default function DeployButtonGenerator() {
         Bitbucket you want to use as a source for users to clone and deploy.
       </Text>
 
-      <form className={styles.settingsForm}>
+      <div className={styles.settingsForm}>
         <div className={styles.settingsSection}>
           <Container>
             <Input
@@ -406,7 +406,7 @@ export default function DeployButtonGenerator() {
             </Text>
           </Details>
         </div>
-      </form>
+      </div>
     </>
   )
 }
