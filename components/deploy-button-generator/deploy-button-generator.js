@@ -184,7 +184,7 @@ export default function DeployButtonGenerator() {
 
       <Text>
         Use the following Deploy Button snippets in your templates to help users
-        get started with their own projects by cloning and deploying from a Git
+        get started with their projects by cloning and deploying from a Git
         repository.
       </Text>
 
@@ -267,7 +267,7 @@ export default function DeployButtonGenerator() {
         <div className={styles.settingsSection}>
           <Container>
             <Input
-              placeholder="Enter a Git Repository"
+              placeholder={defaultRepo}
               defaultValue={defaultRepo}
               width="100%"
               label="Git Repository"
@@ -297,7 +297,7 @@ export default function DeployButtonGenerator() {
                 <>
                   <div className={styles.envRow} key={envVar.id}>
                     <Input
-                      placeholder="Enter a Required Environment Variable"
+                      placeholder="MY_API_KEY"
                       width="100%"
                       value={envVar.value}
                       onChange={event =>
@@ -308,8 +308,9 @@ export default function DeployButtonGenerator() {
                     <Button
                       disabled={env.length === 1}
                       type="secondary"
-                      width={70}
+                      width={40}
                       icon={<Cross />}
+                      iconOffset={13}
                       onClick={event => handleRemoveEnv(index, event)}
                     />
                   </div>
@@ -333,13 +334,13 @@ export default function DeployButtonGenerator() {
             </Text>
             <Input
               label="Environment Variables Description"
-              placeholder="Enter a description of the Environment Variables"
+              placeholder="Enter your API Keys to deploy"
               onChange={handleEnvDescChange}
             />
             <Spacer />
             <Input
               label="Environment Variables Link"
-              placeholder="Enter a link that describes the Environment Variables"
+              placeholder="https://myheadlessproject.com/docs/env-vars"
               onChange={handleEnvLinkChange}
               error={envLinkError}
             />
@@ -355,13 +356,13 @@ export default function DeployButtonGenerator() {
             </Text>
             <Input
               label="Default Project Name"
-              placeholder="Enter a default project name"
+              placeholder="My Awesome Project"
               onChange={handleProjectNameChange}
             />
             <Spacer />
             <Input
               label="Default Repository Name"
-              placeholder="Enter a default repository name"
+              placeholder="my-awesome-project"
               onChange={handleRepoNameChange}
             />
           </Details>
@@ -375,7 +376,7 @@ export default function DeployButtonGenerator() {
             </Text>
             <Input
               label="Redirect URL"
-              placeholder="Enter a Redirect URL"
+              placeholder="https://myheadlessproject.com"
               onChange={handleRedirectURLChange}
             />
             <Spacer />
@@ -393,7 +394,7 @@ export default function DeployButtonGenerator() {
             </Text>
             <Input
               label="Developer ID"
-              placeholder="Enter a Developer ID"
+              placeholder="oac_7rUTiCMow23Gyfao9RQQ3Es2"
               onChange={handleDeveloperIDChange}
               error={developerIdError}
             />
