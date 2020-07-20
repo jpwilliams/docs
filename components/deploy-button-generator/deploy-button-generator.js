@@ -255,7 +255,8 @@ export default function DeployButtonGenerator() {
       </Heading>
 
       <Text>
-        Get started by entering a Git repository, optionally including a subdirectory in the URL, to generated your Deploy Button in the above snippet.
+        Use the following generator to configure the Deploy Button URL,
+        generated in the above snippet.
       </Text>
 
       <Text>
